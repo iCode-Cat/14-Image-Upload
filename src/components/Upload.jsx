@@ -17,7 +17,7 @@ const Upload = () => {
       }));
       const data = new FormData();
       data.append('image', image);
-      const post = await axios.post('/image/upload', data);
+      const post = await axios.post('https://image-upload-apiv5.herokuapp.com/image/upload', data);
       const imageLink = post.data;
       const imgFix = imageLink.includes('localhost')
         ? 'http://' + imageLink
