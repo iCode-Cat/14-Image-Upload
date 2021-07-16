@@ -34,14 +34,6 @@ body {
   position: relative;
 }
 
-button {
-  transition: 0.3s;
-}
-
-button:hover {
-  opacity: 75%;
-}
-
 footer {
   width: 100%;
   text-align: center;
