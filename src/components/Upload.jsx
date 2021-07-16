@@ -30,8 +30,12 @@ const Upload = () => {
         link: imgFix,
       }));
     } catch (error) {
-      console.log(error.response.data.error.msg);
-      alert(error.response.data.error.msg);
+      if(error.response.data.error.msg) {
+        console.log(error.response.data.error.msg);
+        alert(error.response.data.error.msg);
+        return
+      }
+      console.log(error.response)
     }
   };
 
