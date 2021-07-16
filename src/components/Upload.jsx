@@ -10,14 +10,14 @@ const Upload = () => {
 
   const uploadImage = async (image) => {
     try {
-      const data = new FormData();
-      data.append('image', image);
-      const post = await axios.post('/image/upload', data);
-      setStatus((prev) => ({
+       setStatus((prev) => ({
         ...prev,
 
         flow: 'loading',
       }));
+      const data = new FormData();
+      data.append('image', image);
+      const post = await axios.post('/image/upload', data);
       const imageLink = post.data;
       const imgFix = imageLink.includes('localhost')
         ? 'http://' + imageLink
