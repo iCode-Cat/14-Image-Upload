@@ -24,7 +24,6 @@ const Main = () => {
       <main id='main'>
         <article id='main-article'>{uploadFlow()}</article>
       </main>
-      <footer>created by iCode-Cat - devChallenges.io</footer>
     </>
   );
 };
